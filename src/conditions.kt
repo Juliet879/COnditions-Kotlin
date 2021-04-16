@@ -1,10 +1,7 @@
-import java.util.*
-import kotlin.collections.ArrayList
-
 fun main() {
     odd()
     println(nameLength("Juliet","Sindet","Dian","Faith","Pamera","Celine"))
-    println(waiterRobot(24))
+    println(waiterRobot(6))
     checkNumbers()
 
 }
