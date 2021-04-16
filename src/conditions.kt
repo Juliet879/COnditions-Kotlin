@@ -2,14 +2,11 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 fun main() {
-//    odd()
-   nameLength("Juliet","Sindet","Diana","Faith")
+    odd()
+    println(nameLength("Juliet","Sindet","Dian","Faith","Pamera","Celine"))
+    println(waiterRobot(24))
+    checkNumbers()
 
-//    println(waiterRobot(24))
-  //  checkNumbers()
-//    var names = arrayOf("Juliet","Pamera","Diana","Sindet")
-//    checkNumbers()
-//    println(waiterRobot(24))
 }
 fun odd() {
     for(num in 1..100){
@@ -19,9 +16,15 @@ fun odd() {
     }
 }
 
-fun nameLength(name1:String,name2:String,name3:String,name4:String) {
-    var names = arrayOf(name1,name2,name3,name4)
-        for (name in names.size)
+fun nameLength(name1:String,name2:String,name3:String,name4:String,name5:String,name6:String): Int {
+    var names = arrayOf(name1,name2,name3,name4,name5,name6)
+    var checkNames = 0
+    for (name in names){
+        if (name.length > 5){
+            checkNames++
+        }
+    }; return checkNames
+
 }
 
 fun waiterRobot(age:Int):String{
@@ -37,16 +40,16 @@ fun waiterRobot(age:Int):String{
 }
 fun checkNumbers(){
     for (number in 1..100){
-        if (number%3 == 0){
+        if (number%3==0 && number%5==0){
+            println("FizzBuzz")
+        }
+        else if (number%3 == 0){
             println("Fizz")
         }
         else if(number%5 == 0){
             println("Buzz")
         }
-        else if (number%3==0 && number%5==0){
-            println("FizzBuzz")
-        }
-        else{}
+        else {}
     }
 }
 
