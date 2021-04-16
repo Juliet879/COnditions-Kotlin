@@ -28,10 +28,10 @@ fun nameLength(name1:String,name2:String,name3:String,name4:String,name5:String,
 }
 
 fun waiterRobot(age:Int):String{
-    if (age < 6){
+    if (age <= 6){
         return "Milk"
     }
-    else if (age < 15){
+    else if (age <= 15){
         return "Fanta Orange"
     }
     else{
